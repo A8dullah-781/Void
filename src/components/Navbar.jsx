@@ -26,7 +26,7 @@ const Navbar = () => {
     <span className="absolute bottom-[-4px] left-1/2 w-0 h-[1px] bg-white transition-all duration-300 ease-out group-hover:w-full group-hover:left-0" />
   </div>
 
-<div className="relative bg-[#F2F2F2] overflow-hidden text-[1.2vw] text-black py-2 px-3.5 rounded-3xl group">
+<div className="relative bg-[#F2F2F2] overflow-hidden text-[1.2vw] text-black hover:text-white py-2 px-3.5 rounded-3xl group">
   <span className="absolute inset-0 bg-blue-400 rounded-3xl scale-y-0 origin-bottom transition-transform duration-300 ease-out group-hover:scale-y-100"></span>
   <span className="relative z-10">Contact Us</span>
 </div>

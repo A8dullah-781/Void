@@ -19,6 +19,12 @@
 
 @import "tailwindcss";
 
+
+body{
+  overflow-x: hidden;
+}
+
+
 .fontone {
   font-family: 'Raleway', sans-serif;
 }
