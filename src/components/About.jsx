@@ -40,7 +40,7 @@ useEffect(() => {
 
 
   return (
-    <div ref={sectionRef} className='flex flex-row justify-center bg-[#1C1C1C] px-[7.5vw] h-screen w-screen items-center'>
+    <div ref={sectionRef} className='flex flex-row justify-center overflow-hidden bg-[#1C1C1C] px-[7.5vw] h-screen w-screen items-center'>
 
         <div className=' h-full bg-[#1C1C1C] text-[#F2F2F2] fontone flex flex-col items-center pr-[4vw] justify-center w-1/2 '>
           <div className='flex flex-col gap-4'>

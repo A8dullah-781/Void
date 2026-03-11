@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ExpertiseCards } from "../../constants/constant"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,7 +15,6 @@ export default function HorizontalScroll() {
     const scrollWidth = trackRef.current.scrollWidth
     const windowWidth = window.innerWidth
 
-    // Horizontal scroll of panels
     gsap.to(trackRef.current, {
       x: -(scrollWidth - windowWidth),
       ease: "none",
@@ -29,14 +29,12 @@ export default function HorizontalScroll() {
       }
     })
 
-    // Hero fade out
-  // Hero fade out on horizontal scroll
 gsap.to(".hero", {
   opacity: 0,
   ease: "none",
   scrollTrigger: {
-    trigger: trackRef.current, // horizontal track trigger
-    start: "left left",        // jab horizontal scroll start ho
+    trigger: trackRef.current,
+    start: "left left",       
     end: () => "+=" + (trackRef.current.scrollWidth  / 10),
     scrub: 1,
   }
@@ -55,25 +53,26 @@ gsap.to(".hero", {
 </div>
 
 <div ref={trackRef} className="flex relative z-0">
-  <div className="w-[80vw] h-screen flex-shrink-0 bg-[#1C1C1C] text-white flex items-center justify-center">
-  </div>
+  <div className="w-[80vw] h-screen flex-shrink-0 bg-[#1C1C1C] text-white flex items-center justify-center"></div>
 
-
-  <div className="card w-[33vw] h-screen flex-shrink-0 bg-gray-900  text-white flex items-center justify-center">
-    <div className="bg-[#F2F2F2] w-[80%] fontone h-[60%] rounded-4xl p-[1.3vw] flex justify-between text-black flex-col ">
-     <div className="flex flex-col justify-center items-start">
-       <div className="font-semibold mb-2 text-[2.7vw]">Our Expertise</div>
-      <div className="font-normal text-[1.2vw]">We design functional, aesthetic, and well-planned spaces that align with your lifestyle and business needs from concept to final visualization.</div>
-     </div>
-      <div className="flex justify-end"><img src="/images/servicelogo/slogoOne.png" alt="" /></div>
+  {ExpertiseCards.map((card) => (
+    <div
+      key={card.id}
+      className="card w-[33vw] h-screen flex-shrink-0  text-white flex items-center justify-center"
+    >
+      <div className="bg-[#F2F2F2] w-[90%] fontone h-[60%] rounded-4xl p-[1.5vw] flex justify-between text-black flex-col">
+        <div className="flex flex-col justify-center items-start">
+          <div className="font-semibold leading-none mb-2 h-[13vh]  text-[2.7vw]">{card.title}</div>
+          <div className="font-normal text-[1.2vw]">{card.description}</div>
+        </div>
+        <div className="flex w-[5vw] ml-auto">
+          <img src={card.logo} alt={card.title} />
+        </div>
+      </div>
     </div>
-  </div>
+  ))}
 
-  
-  <div className="w-[33vw] h-screen flex-shrink-0 bg-gray-900 text-white flex items-center justify-center">
-    Panel 3 content
-  </div>
-  
+  <div className="w-[33vw] h-screen flex-shrink-0 bg-[#1C1C1C] text-white flex items-center justify-center"></div>
 </div>
 
 </section>
