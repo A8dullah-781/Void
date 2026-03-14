@@ -58,3 +58,28 @@ body{
   will-change: transform;
 }
 
+
+.glass-magnify {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%; /* circle jaise magnifier */
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.glass-magnify::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  background: inherit;
+  transform: scale(2.5); /* peeche ka zoom */
+  transform-origin: center;
+}

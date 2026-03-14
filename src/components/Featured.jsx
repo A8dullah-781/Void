@@ -56,10 +56,10 @@ useEffect(() => {
 
       <div ref={imgPin} className="h-screen w-screen z-20 overflow-hidden bg-black relative">
         <div ref={track} className="flex h-full">
-          <div className="w-screen h-screen bg-amber-600 flex-shrink-0"></div>
-          <div className="w-screen h-screen bg-blue-600 flex-shrink-0"></div>
-          <div className="w-screen h-screen bg-green-600 flex-shrink-0"></div>
-          <div className="w-screen h-screen bg-red-600 flex-shrink-0"></div>
+          <div className="w-screen h-screen bg-amber-600 bg-[url('/images/feature/fone.png')] bg-no-repeat bg-cover flex-shrink-0"></div>
+          <div className="w-screen h-screen bg-amber-600 bg-[url('/images/feature/ftwo.png')] bg-no-repeat bg-cover flex-shrink-0"></div>
+          <div className="w-screen h-screen bg-amber-600 bg-[url('/images/feature/fthree.png')] bg-no-repeat bg-cover flex-shrink-0"></div>
+          <div className="w-screen h-screen bg-amber-600 bg-[url('/images/feature/ffour.png')] bg-no-repeat bg-cover flex-shrink-0"></div>
         </div>
       </div>
     </div>

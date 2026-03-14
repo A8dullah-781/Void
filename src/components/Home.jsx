@@ -2,13 +2,19 @@ import React from 'react'
 
 const Home = () => {
     const boxes = (
-  <>
-    <div className='h-[40vh] w-[15vw] mt-[5vh] ml-5 rounded-tr-[3vw] rounded-xl bg-amber-300'></div>
-    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-amber-300'></div>
-    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-tr-[3vw] rounded-xl bg-amber-300'></div>
-    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-amber-300'></div>
-    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-tr-[3vw] rounded-xl bg-amber-300'></div>
-    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-amber-300'></div>
+  <> 
+    <div className='h-[40vh] w-[15vw] mt-[5vh] ml-5 rounded-tr-[3vw] rounded-xl 
+    bg-[url("/images/marquee/mone.png")] bg-no-repeat bg-cover '></div>
+    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl 
+    bg-[url("/images/marquee/mtwo.png")] bg-no-repeat bg-cover'></div>
+    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-tr-[3vw] rounded-xl 
+    bg-[url("/images/marquee/mthree.png")] bg-no-repeat bg-cover'></div>
+    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl 
+    bg-[url("/images/marquee/mfour.png")] bg-no-repeat bg-cover'></div>
+    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-tr-[3vw] rounded-xl 
+    bg-[url("/images/marquee/mfive.png")] bg-no-repeat bg-cover'></div>
+    <div className='h-[40vh] w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl 
+    bg-[url("/images/marquee/msix.png")] bg-no-repeat bg-cover'></div>
   </>
 );
 
