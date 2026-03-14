@@ -30,7 +30,7 @@ const Testmonial = () => {
   return (
     <div className="w-screen h-full pb-8 px-[5vw] bg-[#1c1c1c]">
       {/* heading */}
-      <div className="flex justify-center md:justify-between -mt-8 items-center text-white py-[4vh] lg:py-10">
+      <div className="flex justify-center md:justify-between  items-center text-white py-[4vh] lg:py-10">
         <div className="text-[10vw] text-[#3E2519] fontone md:text-[#FEF1D9] text-center md:text-left md:text-[4.5vw] font-bold ">
           Clients Feedback
         </div>
