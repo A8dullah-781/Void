@@ -10,6 +10,7 @@ import Featured from './components/Featured';
 import Testmonial from './components/Testmonial';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Process from "./components/Process";
 
 const App = () => {
   useEffect(() => {
@@ -39,6 +40,7 @@ const App = () => {
       <About/>
       <ServiceSide/>
       <Featured/>
+      <Process/>
       <Testmonial/>
       <Contact/>
       <Footer/>
