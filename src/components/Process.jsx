@@ -48,7 +48,6 @@ const Process = () => {
         end: "+=300%",
         scrub: true,
         pin: true,
-        markers: true
       }
     })
 
@@ -65,7 +64,7 @@ const Process = () => {
 }, [])
 
   return (
-    <div ref={processPin} className="h-screen w-screen fontone flex flex-col bg-[#1c1c1c]">
+    <div ref={processPin} className="h-screen w-screen fontone hidden xl:flex flex-col bg-[#1c1c1c]">
       {/* Heading */}
       <div ref={headingRef} className="h-[30%] w-screen flex justify-center items-center flex-col text-white">
         <div className="text-[4vw] font-bold">Our Process</div>

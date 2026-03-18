@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { TestmonialsCards } from "../../constants/constant.js";
+import { FreeMode } from "swiper/modules";
 
 const Star = memo(({ type = "full", isDesktop }) => {
   return (
@@ -9,7 +10,7 @@ const Star = memo(({ type = "full", isDesktop }) => {
       width="16"
       height="16"
       viewBox="0 0 24 24"
-      fill={isDesktop ? "#1c1c1c" : "#FDD7B0"}
+      fill={type === "empty" ? "none" : "#1c1c1c"}
       stroke="#1c1c1c"
       strokeWidth="1.5"
       strokeLinecap="round"
@@ -31,26 +32,19 @@ const Testmonial = () => {
     <div className="w-screen h-full pb-8 px-[5vw] bg-[#1c1c1c]">
       {/* heading */}
       <div className="flex justify-center md:justify-between  items-center text-white py-[4vh] lg:py-10">
-        <div className="text-[10vw] text-[#3E2519] fontone md:text-[#FEF1D9] text-center md:text-left md:text-[4.5vw] font-bold ">
+        <div className="text-[10vw] fontone text-[#FEF1D9] text-center md:text-left md:text-[4.5vw] font-bold ">
           Clients Feedback
         </div>
       </div>
-
       {/* swiper */}
-      <Swiper
+       <Swiper
         spaceBetween={20}
         grabCursor={true}
-        freeMode={true}
+      
         breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
         }}
       >
         {TestmonialsCards.map((card) => {
@@ -61,7 +55,7 @@ const Testmonial = () => {
 
           return (
             <SwiperSlide key={card.id}>
-              <div className="md:h-[25vh] lg:h-[40vh] bg-[#3E2519] md:bg-[#FEF1D9] rounded-3xl p-5 md:p-[1vw] text-[#FEF1D9] md:text-[#3E2519] flex flex-col gap-3">
+              <div className="md:h-[17vh] lg:h-[40vh] bg-[#FEF1D9] rounded-3xl p-5 md:p-[1vw] text-[#1c1c1c]  flex flex-col gap-3">
                 <div className="flex gap-3 items-center">
                   <img
                     src={card.image}
@@ -109,11 +103,9 @@ const Testmonial = () => {
           );
         })}
       </Swiper>
-
       <div className="text-center pt-7 text-[#FFFFFF]">
         &lt; Drag to see more reviews &gt;
       </div>
-
     </div>
   );
 };

@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="mb-6 flex flex-col items-center">
         <div><img className='w-[30vw]' src="/images/logo.png" alt="Logo" /></div>
-        <div className='fonttwo -mt-1 pl-[4vw] tracking-[3em] text-[1.3vw] font-semibold text-center'>STUDIO</div>
+        <div className='fonttwo -mt-1 pl-[4vw] tracking-[3em] md:text-[1.3vw] text-[1.6vw] md:mt-0 mt-2 font-semibold text-center'>STUDIO</div>
         </div>
 
         {/* Nav Links */}

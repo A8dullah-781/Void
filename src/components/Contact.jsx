@@ -2,21 +2,21 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="w-screen h-screen bg-[#F2F2F2] ">
-      <div className="h-[30vh] w-full text-black fontone flex flex-col justify-center items-center text-center ">
-        <div className="text-[1.5vw] tracking-wider  uppercase font-light">Contact us:</div>
-        <div className="text-[3vw]  font-bold">Get in touch with us</div>
-        <div className="text-[1.4vw]  font-light">
-          Fill out the form below or schedule a meeting with us at your <br />
+    <div className="w-screen h-full md:px-0 px-[6vw] bg-[#F2F2F2] ">
+      <div className="lg:h-[30vh] h-full lg:py-0 py-[4vh] w-full text-black fontone flex flex-col justify-center items-center text-center ">
+        <div className="hidden md:block text-[1.5vw] tracking-wider  uppercase font-light">Contact us:</div>
+        <div className="md:text-[3vw] text-[9vw] font-bold">Get in touch with us</div>
+        <div className="md:text-[1.4vw] text-[4vw]  font-light">
+          Fill out the form below or schedule a meeting with us at your
           convenience
         </div>
       </div>
 
-      <div className="flex flex-row px-[7.5vw] -mt-5 justify-center items-center">
+      <div className="flex flex-row md:px-[7.5vw] px-0 md:h-[35vh] lg:h-full -mt-5 justify-center items-center">
 
-        <div className="h-[70vh] w-[50%]">
-<div className="h-full w-full  ">
-        <div className="text-black text-[1.3vw] rounded-3xl w-[85%]">
+        <div className="lg:h-[70vh]  h-full w-full md:w-[50%]">
+<div className="h-full w-full flex justify-center items-center ">
+        <div className="text-black text-[4vw] pb-[4vw] md:text-[1.3vw] rounded-3xl w-full md:w-[85%]">
           <form
             action="https://formsubmit.co/your-email@example.com"
             method="POST"
@@ -59,7 +59,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="mt-2 text-[1.3vw] bg-[#1C1C1C] w-[60%] text-[#FEF1D9] py-4 rounded-2xl "
+              className="mt-2 text-[4vw] md:text-[1.3vw]  bg-[#1C1C1C] w-[80%] md:w-[60%] text-[#FEF1D9] py-4 rounded-2xl "
             >
               Request a consultation
             </button>
@@ -70,7 +70,7 @@ const Contact = () => {
       </div>
         </div>
 
-        <div className="h-[70vh] w-[50%] fontone font-semibold text-[1.3vw] ">
+        <div className="lg:h-[70vh] h-[35vh] w-[50%] hidden md:block fontone font-semibold text-[1.3vw] ">
 
           <div className="mt-10 flex flex-col pl-[7.5vw] justify-center items-start gap-4">  
             <div>Why Work With Void Studio?</div>

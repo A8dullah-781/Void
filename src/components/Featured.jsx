@@ -45,7 +45,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className="flex flex-col w-screen">
+    <div className="lg:flex hidden flex-col w-screen">
       <div
         ref={featuredPin}
         className="text-black z-10 bg-white w-screen z-10 text-[5vw] h-[40vh] font-bold fontone flex justify-center items-center"
