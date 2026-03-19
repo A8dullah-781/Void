@@ -16,10 +16,11 @@ const countersMobileRef = useRef();
  useEffect(() => {
   if (!boxRef.current || !sectionRef.current) return;
 
-  const isMobile = window.innerWidth < 1024;
+  const isMobile = window.innerWidth < 786;
+  const isTab = window.innerWidth < 1024;
 
   // 👉 DESKTOP
-  if (!isMobile) {
+  if (!isTab) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
