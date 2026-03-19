@@ -16,11 +16,10 @@ const countersMobileRef = useRef();
  useEffect(() => {
   if (!boxRef.current || !sectionRef.current) return;
 
-  const isMobile = window.innerWidth < 786;
-  const isTab = window.innerWidth < 1024;
+  const isBelow1024 = window.innerWidth < 1024;
 
-  // 👉 DESKTOP
-  if (!isTab) {
+  // 👉 DESKTOP ONLY (>=1024)
+  if (!isBelow1024) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
@@ -56,7 +55,7 @@ const countersMobileRef = useRef();
     };
   }
 
-  // 👉 MOBILE (NO PIN, ONLY TRIGGER)
+  // 👉 BELOW 1024 (tablet + mobile) → ONLY COUNTER TRIGGER
   gsap.fromTo(
     countersMobileRef.current,
     { y: 20, opacity: 0 },
@@ -67,14 +66,13 @@ const countersMobileRef = useRef();
       ease: "power2.out",
       scrollTrigger: {
         trigger: countersMobileRef.current,
-        start: "top 95%",
+        start: "top 95%", // jab screen me aaye
         onEnter: () => setStartCount(true),
       },
     }
   );
 
 }, []);
-
   return (
     <div
       ref={sectionRef}
