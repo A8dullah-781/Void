@@ -71,7 +71,7 @@ const About = () => {
   return (
     <div
       ref={sectionRef}
-      className="flex flex-col md:flex-row  justify-center overflow-x-hidden bg-[#1C1C1C] px-[7.5vw] lg:h-screen py-0 md:py-8 lg:py-0 h-full md:gap-15 w-screen items-center"
+      className="flex flex-col md:flex-row  justify-center overflow-hidden bg-[#1C1C1C] px-[7.5vw] lg:h-screen py-0 md:py-8 lg:py-0 h-full md:gap-15 w-screen items-center"
     >
       <div className=" px-[7.5vw] pt-3 text-center md:text-left md:px-0 h-full bg-[#1C1C1C] text-[#F2F2F2] fontone flex flex-col items-center pr-[4vw] justify-center w-screen md:w-1/2 ">
         <div className="flex flex-col gap-4">

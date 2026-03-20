@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 
 import Navbar from './components/Navbar';
@@ -11,12 +12,13 @@ import Testmonial from './components/Testmonial';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Process from "./components/Process";
+import Portfolio from "../pages/Portfolio";
 
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.2,      // scroll animation speed
-      easing: (t) => t,   // linear easing
+      duration: 0.2,      
+      easing: (t) => t,   
       smooth: true,
       direction: "vertical",
       gestureDirection: "vertical",
@@ -29,22 +31,37 @@ const App = () => {
 
     requestAnimationFrame(raf);
 
-    return () => lenis.destroy(); // cleanup on unmount
+    return () => lenis.destroy();
   }, []);
 
   return (
-    <div>
-      <Navbar/>
-      <Home/>
-      <Text/>
-      <About/>
-      <ServiceSide/>
-      <Featured/>
-      <Process/>
-      <Testmonial/>
-      <Contact/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Home/>
+            <Text/>
+            <About/>
+            <ServiceSide/>
+            <Featured/>
+            <Process/>
+            <Testmonial/>
+            <Contact/>
+            <Footer/>
+          </>
+        } />
+        
+        <Route path="/portfolio" element={
+          <>
+          <Portfolio />
+          <Contact/>
+            <Footer/>
+          </>
+          } />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
