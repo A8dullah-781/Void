@@ -10,69 +10,64 @@ const About = () => {
   const boxRef = useRef();
   const sectionRef = useRef();
   const countersDesktopRef = useRef();
-const countersMobileRef = useRef();
+  const countersMobileRef = useRef();
 
   const [startCount, setStartCount] = useState(false);
- useEffect(() => {
-  if (!boxRef.current || !sectionRef.current) return;
+  useEffect(() => {
+    if (!boxRef.current || !sectionRef.current) return;
 
-  const isBelow1024 = window.innerWidth < 1024;
+    const isBelow1024 = window.innerWidth < 1024;
 
-  // 👉 DESKTOP ONLY (>=1024)
-  if (!isBelow1024) {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "+=100%",
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-      },
-    });
+    let tl;
 
-    tl.fromTo(boxRef.current, { opacity: 0 }, { opacity: 1, ease: "none" });
-
-    gsap.fromTo(
-      countersDesktopRef.current,
-      { y: 20, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.4,
-        ease: "power2.out",
+    if (!isBelow1024) {
+      tl = gsap.timeline({
         scrollTrigger: {
-          trigger: countersDesktopRef.current,
-          start: "top 90%",
-          onEnter: () => setStartCount(true),
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=100%",
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
         },
-      }
-    );
+      });
+
+      tl.fromTo(boxRef.current, { opacity: 0 }, { opacity: 1 });
+
+      gsap.fromTo(
+        countersDesktopRef.current,
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: countersDesktopRef.current,
+            start: "top 90%",
+            onEnter: () => setStartCount(true),
+          },
+        },
+      );
+    } else {
+      gsap.fromTo(
+        countersMobileRef.current,
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: countersMobileRef.current,
+            start: "top 95%",
+            onEnter: () => setStartCount(true),
+          },
+        },
+      );
+    }
 
     return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
+      ScrollTrigger.getAll().forEach((t) => t.kill()); // 👈 sab saaf
+      tl?.kill();
     };
-  }
-
-  // 👉 BELOW 1024 (tablet + mobile) → ONLY COUNTER TRIGGER
-  gsap.fromTo(
-    countersMobileRef.current,
-    { y: 20, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.4,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: countersMobileRef.current,
-        start: "top 95%", // jab screen me aaye
-        onEnter: () => setStartCount(true),
-      },
-    }
-  );
-
-}, []);
+  }, []);
   return (
     <div
       ref={sectionRef}
@@ -80,7 +75,9 @@ const countersMobileRef = useRef();
     >
       <div className=" px-[7.5vw] pt-3 text-center md:text-left md:px-0 h-full bg-[#1C1C1C] text-[#F2F2F2] fontone flex flex-col items-center pr-[4vw] justify-center w-screen md:w-1/2 ">
         <div className="flex flex-col gap-4">
-          <div className="text-[12vw] md:px-0 px-[10vw] md:text-left text-center  md:text-[4vw]  leading-none py-2 md:py-0  font-black">Studio Philosophy</div>
+          <div className="text-[12vw] md:px-0 px-[10vw] md:text-left text-center  md:text-[4vw]  leading-none py-2 md:py-0  font-black">
+            Studio Philosophy
+          </div>
           <div className="text-[3.4vw] md:text-[1.3vw]">
             VOID STUDIO is an interior design practice focused on creating
             spaces that feel intentional, balanced, and timeless. Our work is
@@ -127,11 +124,10 @@ const countersMobileRef = useRef();
           </div>
         </div>
       </div>
-       <div className="text-[3.5vw] text-center text-white fontone pt-5 md:hidden block">
-            From residential interiors to commercial spaces, our approach
-            remains consistent: thoughtful design, precise execution, and
-            lasting relevance.
-          </div>
+      <div className="text-[3.5vw] text-center text-white fontone pt-5 md:hidden block">
+        From residential interiors to commercial spaces, our approach remains
+        consistent: thoughtful design, precise execution, and lasting relevance.
+      </div>
       <div
         ref={countersMobileRef}
         className="justify-start text-white fontone py-8  gap-10 items-start md:hidden flex flex-row"
@@ -149,7 +145,6 @@ const countersMobileRef = useRef();
           <div className="text-[4vw]">Projects</div>
         </div>
       </div>
-      
     </div>
   );
 };
