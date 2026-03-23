@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Process from "./components/Process";
 import Portfolio from "../pages/Portfolio";
+import Work from "./components/Work";
 
 const App = () => {
   useEffect(() => {
@@ -44,6 +45,7 @@ const App = () => {
             <Home/>
             <Text/>
             <About/>
+            <Work/>
             <ServiceSide/>
             <Featured/>
             <Process/>

@@ -106,4 +106,31 @@ const TestmonialsCards = [
   },
 ];
 
-export  {TestmonialsCards, ExpertiseCards};
+const Projects = [
+  {
+    id:1,
+    img:"/images/work/wone.png",
+    title:"Shadow Line Residence",
+    neiche:"Residential Project",
+  },
+  {
+    id:2,
+    img:"/images/work/wtwo.png",
+    title:"Forest Edge Residence",
+    neiche:"Residential Project",
+  },
+  {
+    id:3,
+    img:"/images/work/wthree.png",
+    title:"Forge Gym",
+    neiche:"Commercial Project",
+  },
+  {
+    id:4,
+    img:"/images/work/wfour.png",
+    title:"Vertex Workplace",
+    neiche:"Commercial Project",
+  },
+]
+
+export  {TestmonialsCards, ExpertiseCards, Projects};

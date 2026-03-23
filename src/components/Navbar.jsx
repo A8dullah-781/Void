@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       {/* DESKTOP SAME */}
       <div className="hidden md:flex justify-center items-center">
-        <div className="bg-[#f2f2f238] glass w-[80vw] lg:w-[60vw] px-6 text-white absolute m-2 rounded-2xl flex justify-between items-center flex-row top-0 h-[7vh] lg:h-[10vh]">
+        <div className="bg-[#f2f2f238] glass w-[80vw] lg:w-[60vw] px-6 text-white absolute m-2 rounded-2xl flex justify-between items-center flex-row top-0 h-[6vh] lg:h-[10vh]">
           <div>
             <img src="/images/logo.png" alt="Logo" className="w-[10vw]" />
           </div>

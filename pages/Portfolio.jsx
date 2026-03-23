@@ -14,15 +14,15 @@ const Projects = () => {
 
   return (
     <>
-      <div className="flex mt-[8vh] min-h-screen w-full items-center flex-col bg-[#1c1c1c] fontone">
+      <div className="flex mt-[6vh] lg:mt-[8vh] min-h-screen w-full items-center flex-col bg-[#1c1c1c] fontone">
         <div className="uppercase text-white font-medium py-10 mt-8 font-[200] text-[5vw]">
           Our work :
         </div>
 
-        <div className="flex flex-col">
+        <div className="md:flex hidden flex-col">
           <div className=" fontone text-white flex py-6 gap-10 flex-row px-[7.5vw] h-full w-screen ">
-            <div className="h-[70vh] w-1/2 bg-[url('/images/work/wone.png')] bg-no-repeat bg-cover"></div>
-            <div className="h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
+            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wone.png')] bg-no-repeat bg-cover"></div>
+            <div className="h-[30vh] lg:h-[70vh]  w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
               <div className="text-[4vw] font-bold uppercase leading-none">
                 Shadow line <br /> Residence
               </div>
@@ -41,7 +41,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="fontone text-white flex py-6 gap-10 flex-row px-[7.5vw] h-full w-screen ">
-            <div className="h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
+            <div className="h-[30vh] lg:h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
               <div className="text-[4vw] font-bold uppercase leading-none">
                 Forest Edge <br /> Residence
               </div>
@@ -54,11 +54,11 @@ const Projects = () => {
                 <span class="text-slide">View Project</span>
               </div>
             </div>
-            <div className="h-[70vh] w-1/2 bg-[url('/images/work/wtwo.png')] bg-no-repeat bg-cover"></div>
+            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wtwo.png')] bg-no-repeat bg-cover"></div>
           </div>
           <div className=" fontone text-white flex py-6 gap-10 flex-row px-[7.5vw] h-full w-screen ">
-            <div className="h-[70vh] w-1/2 bg-[url('/images/work/wthree.png')] bg-no-repeat bg-cover"></div>
-            <div className="h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
+            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wthree.png')] bg-no-repeat bg-cover"></div>
+            <div className="h-[30vh] lg:h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
               <div className="text-[4vw] font-bold uppercase leading-none">
                 Forge Gym
               </div>
@@ -73,7 +73,7 @@ const Projects = () => {
             </div>
           </div>
           <div className=" fontone text-white flex py-6 gap-10 flex-row px-[7.5vw] h-full w-screen ">
-            <div className="h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
+            <div className="h-[35vh] lg:h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
               <div className="text-[4vw] font-bold uppercase leading-none">
                 Vertex <br /> Workspace
               </div>
@@ -86,7 +86,7 @@ const Projects = () => {
                 <span class="text-slide">View Project</span>
               </div>
             </div>
-            <div className="h-[70vh] w-1/2 bg-[url('/images/work/wfour.png')] bg-no-repeat bg-cover"></div>
+            <div className="h-[35vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wfour.png')] bg-no-repeat bg-cover"></div>
           </div>
         </div>
         
