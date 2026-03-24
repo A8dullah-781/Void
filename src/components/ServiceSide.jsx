@@ -55,7 +55,7 @@ export default function HorizontalScroll() {
 }, []);
 
   return (
-    <section className="bg-[#1C1C1C] overflow-hidden relative">
+    <section id="services" className="bg-[#1C1C1C] overflow-hidden relative">
       {/* mobile */}
        <div className="md:hidden fontone w-screen px-[7.5vw]">
       <div className="font-bold text-[12vw] text-center py-6 text-[#FFFFFF] leading-none">

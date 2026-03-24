@@ -18,24 +18,20 @@ const Work = () => {
     if(currentIndex > 0) setCurrentIndex(currentIndex - 1)
   }
 
+  // ✅ Fixed: direct navigate, no setTimeout, no DOM dependency
   const handleViewProject = () => {
-    // Navigate to dynamic project routes
-    switch(currentIndex){
-      case 0: navigate("/projectOne"); break;
-      case 1: navigate("/projectTwo"); break;
-      case 2: navigate("/projectThree"); break;
-      case 3: navigate("/projectFour"); break;
-      default: break;
-    }
+    const paths = ["/projectOne","/projectTwo","/projectThree","/projectFour"];
+    navigate(paths[currentIndex]); // SPA direct navigate
   }
 
   useEffect(() => {
-    // Image fade
+    if(!imgRef.current || !textRef.current) return;
+
     gsap.fromTo(imgRef.current,
       { opacity: 0 },
       { opacity: 1, duration: 0.6 }
     )
-    // Text fade
+
     gsap.fromTo(textRef.current,
       { opacity: 0 },
       { opacity: 1, duration: 0.5, delay: 0.2 }

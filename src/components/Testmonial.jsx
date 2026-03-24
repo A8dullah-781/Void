@@ -32,7 +32,7 @@ const Testmonial = () => {
     <div className="w-screen h-full pb-8 px-[5vw] bg-[#1c1c1c]">
       {/* heading */}
       <div className="flex justify-center md:justify-between  items-center text-white py-[4vh] lg:py-10">
-        <div className="text-[10vw] fontone text-[#FEF1D9] text-center md:text-left md:text-[4.5vw] font-bold ">
+        <div className="text-[10vw] fontone text-[#F2F2F2] text-center md:text-left md:text-[4.5vw] font-bold ">
           Clients Feedback
         </div>
       </div>
@@ -55,7 +55,7 @@ const Testmonial = () => {
 
           return (
             <SwiperSlide key={card.id}>
-              <div className="md:h-[17vh] lg:h-[40vh] bg-[#FEF1D9] rounded-3xl p-5 md:p-[1vw] text-[#1c1c1c]  flex flex-col gap-3">
+              <div className="md:h-[17vh] lg:h-[40vh] bg-[#F2F2F2] rounded-3xl p-5 md:p-[1vw] text-[#1c1c1c]  flex flex-col gap-3">
                 <div className="flex gap-3 items-center">
                   <img
                     src={card.image}

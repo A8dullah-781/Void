@@ -69,7 +69,7 @@ const About = () => {
     };
   }, []);
   return (
-    <div
+    <div id="about"
       ref={sectionRef}
       className="flex flex-col md:flex-row  justify-center overflow-hidden bg-[#1C1C1C] px-[7.5vw] lg:h-screen py-0 md:py-8 lg:py-0 h-full md:gap-15 w-screen items-center"
     >

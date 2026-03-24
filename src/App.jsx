@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Lenis from "@studio-freight/lenis";
+import React from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -12,37 +11,28 @@ import Testmonial from "./components/Testmonial";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Process from "./components/Process";
-import Portfolio from "../pages/Portfolio";
 import Work from "./components/Work";
+
+import Portfolio from "../pages/Portfolio";
 import PortfolioOne from "../pages/PortfolioOne";
 import PortfolioTwo from "../pages/PortfolioTwo";
 import PortfolioThree from "../pages/PortfolioThree";
 import PortfolioFour from "../pages/PortfolioFour";
 
+// Scroll top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+  return null;
+};
+
 const App = () => {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 0.2,
-      easing: (t) => t,
-      smooth: true,
-      direction: "vertical",
-      gestureDirection: "vertical",
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => lenis.destroy();
-  }, []);
-
   return (
     <BrowserRouter>
       <Navbar />
-
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
@@ -61,7 +51,6 @@ const App = () => {
             </>
           }
         />
-
         <Route
           path="/portfolio"
           element={
@@ -94,7 +83,7 @@ const App = () => {
           path="/projectThree"
           element={
             <>
-              <PortfolioThree/>
+              <PortfolioThree />
               <Footer />
             </>
           }
@@ -103,12 +92,11 @@ const App = () => {
           path="/projectFour"
           element={
             <>
-              <PortfolioFour/>
+              <PortfolioFour />
               <Footer />
             </>
           }
         />
-        
       </Routes>
     </BrowserRouter>
   );
