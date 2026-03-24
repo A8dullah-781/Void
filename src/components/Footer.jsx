@@ -4,7 +4,7 @@ export default function Footer() {
   const links = ["Home", "About us", "Services", "Portfolio"];
 
   return (
-    <footer className="bg-[#111] text-gray-400 px-6 py-14">
+    <footer className="bg-[#1c1c1c] text-gray-400 px-6 py-14">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
 
         {/* Logo */}

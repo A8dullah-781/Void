@@ -133,4 +133,39 @@ const Projects = [
   },
 ]
 
-export  {TestmonialsCards, ExpertiseCards, Projects};
+
+const portfolioOne = [
+  {
+    color: "#1A1A1B",
+    title: "Matte Black",
+    desc: "Furniture, Media Wall, Window Frames",
+  },
+  {
+    color: "#36393F",
+    title: "Charcoal Grey",
+    desc: "Accent Walls, Sofa, Bedding",
+  },
+  {
+    color: "#36393F",
+    title: "Slate Grey",
+    desc: "Rugs, Curtains, Secondary Pillows",
+  },
+  {
+    color: "#E1E2E2",
+    title: "Greyish White",
+    desc: "Main Walls, Ceiling, Bed Linen",
+  },
+  {
+    color: "#BDBDBF",
+    title: "Soft Ash",
+    desc: "Floor Tiles, Concrete Finish",
+  },
+  {
+    color: "#0D0D0D",
+    title: "Marble Accent",
+    desc: "Black Marble with White Veins ",
+  },
+];
+
+
+export  {TestmonialsCards, ExpertiseCards, Projects, portfolioOne};
