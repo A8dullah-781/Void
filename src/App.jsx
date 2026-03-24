@@ -15,6 +15,9 @@ import Process from "./components/Process";
 import Portfolio from "../pages/Portfolio";
 import Work from "./components/Work";
 import PortfolioOne from "../pages/PortfolioOne";
+import PortfolioTwo from "../pages/PortfolioTwo";
+import PortfolioThree from "../pages/PortfolioThree";
+import PortfolioFour from "../pages/PortfolioFour";
 
 const App = () => {
   useEffect(() => {
@@ -69,15 +72,43 @@ const App = () => {
             </>
           }
         />
-        <Route path="/projectOne" element={
-         <>
-          <PortfolioOne/>
-      <Footer/>
-         </>
-      } />
-        <Route path="/projectTwo" element={<div>Project Two</div>} />
-        <Route path="/projectThree" element={<div>Project Three</div>} />
-        <Route path="/projectFour" element={<div>Project Four</div>} />
+        <Route
+          path="/projectOne"
+          element={
+            <>
+              <PortfolioOne />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/projectTwo"
+          element={
+            <>
+              <PortfolioTwo />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/projectThree"
+          element={
+            <>
+              <PortfolioThree/>
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/projectFour"
+          element={
+            <>
+              <PortfolioFour/>
+              <Footer />
+            </>
+          }
+        />
+        
       </Routes>
     </BrowserRouter>
   );
