@@ -1,7 +1,7 @@
 const TestmonialsCards = [
   {
     id: 1,
-    image: "/images/clients/clientOne.webp",
+    image: "/images/clients/clientOne.png",
     rating: 4.5,
     descriptionOne:
       "“LINEA Interiors showed a strong understanding of space planning and design balance. The concepts were clean, modern, and practical for real-world execution.”",
@@ -11,7 +11,7 @@ const TestmonialsCards = [
   },
   {
     id: 2,
-    image: "/images/clients/clientTwo.webp",
+    image: "/images/clients/clientTwo.png",
     rating: 5,
     descriptionOne:
       "”The 3D visualizations were clear and realistic, which made decision-making much easier. The overall design process felt structured and professional.”",
@@ -21,7 +21,7 @@ const TestmonialsCards = [
   },
   {
     id: 3,
-    image: "/images/clients/clientThree.webp",
+    image: "/images/clients/clientThree.png",
     rating: 4,
     descriptionOne:
       "“The attention to proportions, materials, and layout details was impressive. The final design felt refined without being overdone.”",
@@ -31,7 +31,7 @@ const TestmonialsCards = [
   },
   {
     id: 4,
-    image: "/images/clients/clientFour.webp",
+    image: "/images/clients/clientFour.png",
     rating: 5,
     descriptionOne:
       "“From initial concepts to final visuals, the workflow was smooth and efficient. The designs were thoughtful and aligned well with functional needs.”",
@@ -41,7 +41,7 @@ const TestmonialsCards = [
   },
   {
     id: 5,
-    image: "/images/clients/clientFive.webp",
+    image: "/images/clients/clientFive.png",
     rating: 5,
     descriptionOne:
       "“LINEA Interiors demonstrated a refined approach to layout and spatial balance. The concepts were modern, minimal, and thoughtfully executed.”",
@@ -51,7 +51,7 @@ const TestmonialsCards = [
   },
   {
     id: 6,
-    image: "/images/clients/clientSix.webp",
+    image: "/images/clients/clientSix.png",
     rating: 5,
     descriptionOne:
       "“The clarity in design thinking and visual presentation stood out. The 3D concepts communicated ideas effectively and reduced unnecessary revisions.”",
@@ -61,7 +61,7 @@ const TestmonialsCards = [
   },
   {
     id: 7,
-    image: "/images/clients/clientSeven.webp",
+    image: "/images/clients/clientSeven.png",
     rating: 5,
     descriptionOne:
       "“LINEA Interiors presented a clean and structured design approach. The layouts felt intentional, modern, and well-aligned with contemporary interior standards.”",
@@ -69,16 +69,7 @@ const TestmonialsCards = [
     name: "Oliver Bennett ",
     title: "CEO Bennet Studio  ",
   },
-  {
-    id: 8,
-    image: "/images/clients/clientEight.webp",
-    rating: 3.5,
-    descriptionOne:
-      "“The design concepts were clear, functional, and visually refined. The process felt efficient and well thought out from start to finish.”",
-    descriptionTwo: "“Minimal design with a strong functional approach.”",
-    name: "Ryan Mitchell ",
-    title: "CEO M.D Consultants  ",
-  },
+  
 ];
 
 const ExpertiseCards = [

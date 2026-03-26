@@ -27,6 +27,8 @@ const Home = () => {
     return () => lenis.destroy();
   }, []);
 
+  
+
   const handleNavClick = (id) => {
     if (location.pathname !== "/") {
       navigate("/");

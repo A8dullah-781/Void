@@ -87,7 +87,10 @@ const Contact = () => {
             <div>Always busy and want to book <br />
                  an exact time to call?</div>
 
-            <button className="py-4 px-10 rounded-2xl border-black border-1 mt-1">Book a call</button>
+            <button className="py-4 btn-slide px-10 rounded-2xl border-black border-1 mt-1">
+               <span className="bg-slide"></span>
+                <span className="text-slide">Book a call</span>
+            </button>
             </div>
 
         </div>
