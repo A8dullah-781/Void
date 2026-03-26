@@ -53,6 +53,7 @@ const Home = () => {
   );
 
   return (
+    <>
     <div id='home' className='bg-[#1C1C1C] w-screen h-full lg:h-screen'>
       <div className='text-white pt-[5vh] md:pt-[12vh] lg:pt-[18vh] flex flex-col justify-center items-center '>
         <div><img className='w-[80vw] md:w-[60vw] lg:w-[40vw]' src="/images/logo.png" alt="Logo" /></div>
@@ -78,6 +79,8 @@ const Home = () => {
         </div>
       </div>
     </div>
+    
+          </>
   )
 }
 

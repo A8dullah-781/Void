@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom"; // 👈 add this
 import Count from "../utils/Count";
-import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const location = useLocation(); // 👈 useLocation hook
   const boxRef = useRef();
   const sectionRef = useRef();
   const countersDesktopRef = useRef();
   const countersMobileRef = useRef();
-
   const [startCount, setStartCount] = useState(false);
+
   useEffect(() => {
+    if (location.pathname !== "/") return; // 👈 only run on Home
+
     if (!boxRef.current || !sectionRef.current) return;
 
     const isBelow1024 = window.innerWidth < 1024;
-
     let tl;
 
     if (!isBelow1024) {
@@ -45,7 +47,7 @@ const About = () => {
             start: "top 90%",
             onEnter: () => setStartCount(true),
           },
-        },
+        }
       );
     } else {
       gsap.fromTo(
@@ -59,17 +61,18 @@ const About = () => {
             start: "top 95%",
             onEnter: () => setStartCount(true),
           },
-        },
+        }
       );
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill()); // 👈 sab saaf
+      ScrollTrigger.getAll().forEach((t) => t.kill());
       tl?.kill();
     };
-  }, []);
+  }, [location.pathname]); // 👈 add dependency
+
   return (
-    <div id="about"
+   <div id="about"
       ref={sectionRef}
       className="flex flex-col md:flex-row  justify-center overflow-hidden bg-[#1C1C1C] px-[7.5vw] lg:h-screen py-0 md:py-8 lg:py-0 h-full md:gap-15 w-screen items-center"
     >
@@ -150,3 +153,4 @@ const About = () => {
 };
 
 export default About;
+

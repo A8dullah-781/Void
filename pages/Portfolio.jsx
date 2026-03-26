@@ -16,7 +16,7 @@ const Projects = () => {
 
   return (
     <>
-      <div id="portfolio" className="flex mt-[6vh] lg:mt-[8vh] min-h-screen w-full items-center flex-col bg-[#1c1c1c] fontone">
+      <div id="portfolio" className="flex z-50 mt-[6vh] lg:mt-[8vh] min-h-screen w-full items-center flex-col bg-[#1c1c1c] fontone">
         <div className="uppercase text-white font-medium py-10 mt-8 font-[200] text-[5vw]">
           Our work :
         </div>
