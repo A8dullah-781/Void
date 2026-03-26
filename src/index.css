@@ -35,11 +35,12 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-.glass{
-    backdrop-filter: blur(4px);
+.glass {
+    background: rgba(255, 255, 255, 0.1); /* transparency add ki */
+    backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    border-top:1px solid rgba(255, 255, 255, 0.349);
-    border-left:1px solid rgba(255, 255, 255, 0.237);
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    border-left: 1px solid rgba(255, 255, 255, 0.24);
     box-shadow: 0 5px 22px 0 rgba(0, 0, 0, 0.37);
 }
 
