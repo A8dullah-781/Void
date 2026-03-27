@@ -58,12 +58,12 @@ const Home = () => {
 
   const boxes = (
     <>
-      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] ml-5 rounded-tr-[3vw] rounded-xl bg-[url("/images/marquee/mone.png")] bg-no-repeat bg-cover'></div>
-      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-[url("/images/marquee/mtwo.png")] bg-no-repeat bg-cover'></div>
-      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-tr-[3vw] rounded-xl bg-[url("/images/marquee/mthree.png")] bg-no-repeat bg-cover'></div>
-      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-[url("/images/marquee/mfour.png")] bg-no-repeat bg-cover'></div>
-      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-tr-[3vw] rounded-xl bg-[url("/images/marquee/mfive.png")] bg-no-repeat bg-cover'></div>
-      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-[url("/images/marquee/msix.png")] bg-no-repeat bg-cover'></div>
+      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] ml-5 rounded-tr-[3vw] rounded-xl bg-[url("/images/marquee/mone.webp")] bg-no-repeat bg-cover'></div>
+      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-[url("/images/marquee/mtwo.webp")] bg-no-repeat bg-cover'></div>
+      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-tr-[3vw] rounded-xl bg-[url("/images/marquee/mthree.webp")] bg-no-repeat bg-cover'></div>
+      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-[url("/images/marquee/mfour.webp")] bg-no-repeat bg-cover'></div>
+      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-tr-[3vw] rounded-xl bg-[url("/images/marquee/mfive.webp")] bg-no-repeat bg-cover'></div>
+      <div className='h-[28vh] lg:h-[40vh] w-[45vw] md:w-[22vw] lg:w-[15vw] mt-[5vh] rounded-bl-[3vw] rounded-xl bg-[url("/images/marquee/msix.webp")] bg-no-repeat bg-cover'></div>
     </>
   );
 
@@ -72,7 +72,7 @@ const Home = () => {
     <div id='home' className='bg-[#1C1C1C] w-screen pt-[7vh] md:pt-0 h-full lg:h-screen'>
       <div className='text-white pt-[5vh] md:pt-[12vh] lg:pt-[18vh] flex flex-col justify-center items-center '>
  <div ref={textRef} className='flex flex-col justify-center items-center'>
-         <div ><img className='w-[80vw] md:w-[60vw] lg:w-[40vw]' src="/images/logo.png" alt="Logo" /></div>
+         <div ><img className='w-[80vw] md:w-[60vw] lg:w-[40vw]' src="/images/logo.webp" alt="Logo" /></div>
         <div  className='fonttwo -mt-1 pl-[10vw] md:pl-[6vw] lg:pl-[4vw] tracking-[3.5em] text-[3vw] md:text-[2vw] lg:text-[1.3vw] font-semibold text-center'>STUDIO</div>
         <div  className='fontone mt-4 tracking-normal font-light  text-[4vw] md:text-[3vw] lg:text-[1.2vw]'>Interior design studio based in London</div>
          <div

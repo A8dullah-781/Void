@@ -131,7 +131,7 @@ useEffect(() => {
       </div>
 
       <div className=" flex justify-center  items-center h-full px-[7.5vw] md:px-0 w-screen md:w-1/2">
-        <div className='h-[30vh] lg:h-[75vh] md:my-0 my-6 relative w-full bg-[url("/images/about.png")] bg-no-repeat bg-cover rounded-3xl'>
+        <div className='h-[30vh] lg:h-[75vh] md:my-0 my-6 relative w-full bg-[url("/images/about.webp")] bg-no-repeat bg-cover rounded-3xl'>
           <div
             ref={boxRef}
             className=" w-[50vw] md:w-[25vw] flex justify-center items-center p-4 lg:p-10 absolute bottom-[-25px] right-[-15px] h-[10vh] md:h-[8vh] lg:h-[20vh] rounded-3xl glassa "

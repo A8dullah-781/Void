@@ -25,7 +25,7 @@ const Projects = () => {
 
           {/* Card 1 */}
           <div className="fontone text-white flex py-6 gap-10 flex-row px-[7.5vw] h-full w-screen ">
-            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wone.png')] bg-no-repeat bg-cover"></div>
+            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wone.webp')] bg-no-repeat bg-cover"></div>
             <div className="h-[30vh] lg:h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
               <div className="text-[4vw] font-bold uppercase leading-none">
                 Shadow line <br /> Residence
@@ -66,12 +66,12 @@ const Projects = () => {
                 <span className="text-slide">View Project</span>
               </div>
             </div>
-            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wtwo.png')] bg-no-repeat bg-cover"></div>
+            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wtwo.webp')] bg-no-repeat bg-cover"></div>
           </div>
 
           {/* Card 3 */}
           <div className="fontone text-white flex py-6 gap-10 flex-row px-[7.5vw] h-full w-screen ">
-            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wthree.png')] bg-no-repeat bg-cover"></div>
+            <div className="h-[30vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wthree.webp')] bg-no-repeat bg-cover"></div>
             <div className="h-[30vh] lg:h-[70vh] w-1/2 flex flex-col p-8 items-start justify-center gap-4 bg-[#1c1c1c]">
               <div className="text-[4vw] font-bold uppercase leading-none">
                 Forge Gym
@@ -108,7 +108,7 @@ const Projects = () => {
                 <span className="text-slide">View Project</span>
               </div>
             </div>
-            <div className="h-[35vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wfour.png')] bg-no-repeat bg-cover"></div>
+            <div className="h-[35vh] lg:h-[70vh] w-1/2 bg-[url('/images/work/wfour.webp')] bg-no-repeat bg-cover"></div>
           </div>
 
         </div>

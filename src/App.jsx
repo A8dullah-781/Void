@@ -56,7 +56,7 @@ const App = () => {
         ref={mainRef}
         className="h-screen w-screen flex justify-center items-center"
       >
-        <img className="w-[50vw] md:w-[30vw]" src="/images/logo.png" />
+        <img className="w-[50vw] md:w-[30vw]" src="/images/logo.webp" />
       </div>
     );
   }

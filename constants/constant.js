@@ -1,7 +1,7 @@
 const TestmonialsCards = [
   {
     id: 1,
-    image: "/images/clients/clientOne.png",
+    image: "/images/clients/clientOne.webp",
     rating: 4.5,
     descriptionOne:
       "VOID Interiors showed a strong understanding of space planning and design balance. The concepts were clean, modern, and practical for real-world execution.”",
@@ -11,7 +11,7 @@ const TestmonialsCards = [
   },
   {
     id: 2,
-    image: "/images/clients/clientTwo.png",
+    image: "/images/clients/clientTwo.webp",
     rating: 5,
     descriptionOne:
       "”The 3D visualizations were clear and realistic, which made decision-making much easier. The overall design process felt structured and professional.”",
@@ -21,7 +21,7 @@ const TestmonialsCards = [
   },
   {
     id: 3,
-    image: "/images/clients/clientThree.png",
+    image: "/images/clients/clientThree.webp",
     rating: 4,
     descriptionOne:
       "“The attention to proportions, materials, and layout details was impressive. The final design felt refined without being overdone.”",
@@ -31,7 +31,7 @@ const TestmonialsCards = [
   },
   {
     id: 4,
-    image: "/images/clients/clientFour.png",
+    image: "/images/clients/clientFour.webp",
     rating: 5,
     descriptionOne:
       "“From initial concepts to final visuals, the workflow was smooth and efficient. The designs were thoughtful and aligned well with functional needs.”",
@@ -41,7 +41,7 @@ const TestmonialsCards = [
   },
   {
     id: 5,
-    image: "/images/clients/clientFive.png",
+    image: "/images/clients/clientFive.webp",
     rating: 5,
     descriptionOne:
       "VOID Interiors demonstrated a refined approach to layout and spatial balance. The concepts were modern, minimal, and thoughtfully executed.”",
@@ -51,7 +51,7 @@ const TestmonialsCards = [
   },
   {
     id: 6,
-    image: "/images/clients/clientSix.png",
+    image: "/images/clients/clientSix.webp",
     rating: 5,
     descriptionOne:
       "“The clarity in design thinking and visual presentation stood out. The 3D concepts communicated ideas effectively and reduced unnecessary revisions.”",
@@ -61,7 +61,7 @@ const TestmonialsCards = [
   },
   {
     id: 7,
-    image: "/images/clients/clientSeven.png",
+    image: "/images/clients/clientSeven.webp",
     rating: 5,
     descriptionOne:
       "VOID Interiors presented a clean and structured design approach. The layouts felt intentional, modern, and well-aligned with contemporary interior standards.”",
@@ -78,60 +78,60 @@ const ExpertiseCards = [
     title: "Our Expertise",
     description:
       "We design functional, aesthetic, and well-planned spaces that align with your lifestyle and business needs, from concept to final visualization.",
-    logo: "/images/servicelogo/slogoOne.png",
+    logo: "/images/servicelogo/slogoOne.webp",
   },
   {
     id: 2,
     title: "Design Strategy & Space Planning",
     description:
       "We audit spatial needs and movement flow to create a data-driven layout and intelligent zoning strategy. By optimizing every square foot, we provide a definitive roadmap that guides all technical decisions, eliminating ambiguity for a seamless project execution.",
-    logo: "/images/servicelogo/slogoTwo.png",
+    logo: "/images/servicelogo/slogoTwo.webp",
   },
   {
     id: 3,
     title: "Residential Interior Design",
     description:
       "We design distinctive residential interiors that blend comfort with high-performance functionality. By prioritizing texture, light, and premium materials, we create refined sanctuaries tailored to our clients' lifestyles, ensuring every space is both intuitive and aesthetically harmonious.",
-    logo: "/images/servicelogo/slogoThree.png",
+    logo: "/images/servicelogo/slogoThree.webp",
   },
   {
     id: 4,
     title: "Commercial & Office Interior Design",
     description:
       "We design bespoke commercial interiors that maximize productivity and spatial efficiency. By integrating human-centric design with smart technology, we create high-performance environments that elevate your brand and optimize daily operations.",
-    logo: "/images/servicelogo/slogoFour.png",
+    logo: "/images/servicelogo/slogoFour.webp",
   },
   {
     id: 5,
     title: "3D Visualization & Design Revamp",
     description:
       "Our hyper-realistic 3D visualizations let you validate every detail before construction. For existing spaces, our strategic design revamps modernize your environment by reimagining layouts and finishes—delivering a fresh look without the cost of structural changes.",
-    logo: "/images/servicelogo/slogoFive.png",
+    logo: "/images/servicelogo/slogoFive.webp",
   },
 ];
 
 const Projects = [
   {
     id: 1,
-    img: "/images/work/wone.png",
+    img: "/images/work/wone.webp",
     title: "Shadow Line Residence",
     neiche: "Residential Project",
   },
   {
     id: 2,
-    img: "/images/work/wtwo.png",
+    img: "/images/work/wtwo.webp",
     title: "Forest Edge Residence",
     neiche: "Residential Project",
   },
   {
     id: 3,
-    img: "/images/work/wthree.png",
+    img: "/images/work/wthree.webp",
     title: "Forge Gym",
     neiche: "Commercial Project",
   },
   {
     id: 4,
-    img: "/images/work/wfour.png",
+    img: "/images/work/wfour.webp",
     title: "Vertex Workplace",
     neiche: "Commercial Project",
   },

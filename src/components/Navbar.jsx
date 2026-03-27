@@ -68,7 +68,7 @@ const Navbar = () => {
       >
         <div className="bg-[#f2f2f238]/80 glass w-[80vw] lg:w-[60vw] px-6 text-white m-2 rounded-2xl flex justify-between items-center flex-row h-[6vh] lg:h-[10vh]">
           <div>
-            <img src="/images/logo.png" alt="Logo" className="w-[10vw]" />
+            <img src="/images/logo.webp" alt="Logo" className="w-[10vw]" />
           </div>
 
           <div className="flex text-[1.8vw] lg:text-[1.2vw] fontone flex-row gap-5 lg:gap-8 justify-center items-center">
@@ -115,7 +115,7 @@ const Navbar = () => {
         ref={mobileRef}
         className="md:hidden fixed top-0 w-full z-50 flex justify-between items-center px-5 py-4 bg-[#1C1C1C] text-white"
       >
-        <img src="/images/logo.png" alt="Logo" className="w-[30vw]" />
+        <img src="/images/logo.webp" alt="Logo" className="w-[30vw]" />
         <div onClick={() => setOpen(true)} className="cursor-pointer">
           <div className="w-6 h-[2px] bg-white mb-1"></div>
           <div className="w-6 h-[2px] bg-white mb-1"></div>
@@ -137,7 +137,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex justify-center mt-2">
-          <img src="/images/logo.png" className="w-[60vw]" />
+          <img src="/images/logo.webp" className="w-[60vw]" />
         </div>
 
         <div className="flex flex-col items-center gap-4 mt-10 text-[5vw] fontone">
