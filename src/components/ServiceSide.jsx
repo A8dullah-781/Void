@@ -71,10 +71,10 @@ export default function HorizontalScroll() {
           <SwiperSlide key={card.id} className="w-[90vw] py-8">
             <div className="bg-[#F2F2F2] fontone h-[38vh] rounded-4xl p-[5vw] flex justify-between text-black flex-col">
               <div className="flex flex-col justify-center items-start">
-                <div className="font-semibold leading-none h-[10vh] text-[7vw]">
+                <div className="font-semibold leading-none h-[10vh] bg-amber-800 text-[6vw]">
                   {card.title}
                 </div>
-                <div className="font-normal text-[3vw]">{card.description}</div>
+                <div className="font-normal mt-4 text-[3vw]">{card.description}</div>
               </div>
               <div className="flex w-[15vw] ml-auto">
                 <img src={card.logo} alt={card.title} />
@@ -106,7 +106,7 @@ export default function HorizontalScroll() {
             >
               <div className="bg-[#F2F2F2] w-[90%] fontone h-[60%] rounded-4xl p-[2vw] flex justify-between text-black flex-col">
                 <div className="flex flex-col justify-center items-start">
-                  <div className="font-semibold leading-none mb-2  md:h-[5vh]  lg:h-[13vh]  text-[2.7vw]">
+                  <div className="font-semibold leading-none mb-2  md:h-[5vh]  lg:h-[13vh]  text-[2.5vw]">
                     {card.title}
                   </div>
                   <div className="font-normal text-[1.2vw]">

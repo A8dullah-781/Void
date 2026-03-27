@@ -4,7 +4,7 @@ const TestmonialsCards = [
     image: "/images/clients/clientOne.png",
     rating: 4.5,
     descriptionOne:
-      "“LINEA Interiors showed a strong understanding of space planning and design balance. The concepts were clean, modern, and practical for real-world execution.”",
+      "VOID Interiors showed a strong understanding of space planning and design balance. The concepts were clean, modern, and practical for real-world execution.”",
     descriptionTwo: "“Clear communication and structured design process.”",
     name: "Ahmad Raza",
     title: "CEO AR Construction",
@@ -44,7 +44,7 @@ const TestmonialsCards = [
     image: "/images/clients/clientFive.png",
     rating: 5,
     descriptionOne:
-      "“LINEA Interiors demonstrated a refined approach to layout and spatial balance. The concepts were modern, minimal, and thoughtfully executed.”",
+      "VOID Interiors demonstrated a refined approach to layout and spatial balance. The concepts were modern, minimal, and thoughtfully executed.”",
     descriptionTwo: "“Minimal design with a strong functional approach.”",
     name: "Daniel Carter",
     title: "CEO Carter & Co",
@@ -64,7 +64,7 @@ const TestmonialsCards = [
     image: "/images/clients/clientSeven.png",
     rating: 5,
     descriptionOne:
-      "“LINEA Interiors presented a clean and structured design approach. The layouts felt intentional, modern, and well-aligned with contemporary interior standards.”",
+      "VOID Interiors presented a clean and structured design approach. The layouts felt intentional, modern, and well-aligned with contemporary interior standards.”",
     descriptionTwo: "“Strong focus on usability and spatial balance.”",
     name: "Oliver Bennett ",
     title: "CEO Bennet Studio  ",

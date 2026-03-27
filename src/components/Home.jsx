@@ -58,7 +58,7 @@ const Home = () => {
       <div className='text-white pt-[5vh] md:pt-[12vh] lg:pt-[18vh] flex flex-col justify-center items-center '>
         <div><img className='w-[80vw] md:w-[60vw] lg:w-[40vw]' src="/images/logo.png" alt="Logo" /></div>
         <div className='fonttwo -mt-1 pl-[10vw] md:pl-[6vw] lg:pl-[4vw] tracking-[3.5em] text-[3vw] md:text-[2vw] lg:text-[1.3vw] font-semibold text-center'>STUDIO</div>
-        <div className='fontone mt-4 tracking-normal font-light text-[4vw] md:text-[3vw] lg:text-[1.2vw]'>Interior design studio based in London</div>
+        <div className='fontone mt-4 tracking-normal font-light  text-[4vw] md:text-[3vw] lg:text-[1.2vw]'>Interior design studio based in London</div>
 
         <div
           onClick={() => handleNavClick("contact")}

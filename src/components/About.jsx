@@ -14,22 +14,23 @@ const About = () => {
   const countersMobileRef = useRef();
   const [startCount, setStartCount] = useState(false);
 
-  useEffect(() => {
-    if (location.pathname !== "/") return; // 👈 only run on Home
+useEffect(() => {
+  if (location.pathname !== "/") return;
 
+  const ctx = gsap.context(() => {
     if (!boxRef.current || !sectionRef.current) return;
 
     const isBelow1024 = window.innerWidth < 1024;
-    let tl;
 
     if (!isBelow1024) {
-      tl = gsap.timeline({
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
           end: "+=100%",
           scrub: true,
-          pin: true,
+          pin: sectionRef.current,
+          pinSpacing:true,
           anticipatePin: 1,
         },
       });
@@ -64,15 +65,14 @@ const About = () => {
         }
       );
     }
+  }, sectionRef);
 
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-      tl?.kill();
-    };
-  }, [location.pathname]); // 👈 add dependency
+  return () => ctx.revert(); // 👈 ONLY CLEANUP THAT WORKS
+}, [location.pathname]);
 
   return (
-   <div id="about"
+   <div id="about-wrapper">
+    <div id="about"
       ref={sectionRef}
       className="flex flex-col md:flex-row  justify-center overflow-hidden bg-[#1C1C1C] px-[7.5vw] lg:h-screen py-0 md:py-8 lg:py-0 h-full md:gap-15 w-screen items-center"
     >
@@ -149,6 +149,7 @@ const About = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 
