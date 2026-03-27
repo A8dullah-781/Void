@@ -23,6 +23,19 @@ const Navbar = () => {
     }
     setOpen(false);
   };
+  useEffect(() => {
+  const target =
+    window.innerWidth >= 768 ? desktopRef.current : mobileRef.current;
+
+  if (!target) return;
+
+  gsap.fromTo(
+    target,
+    { opacity: 0, },
+    { opacity: 1, duration: 1.2, delay:0.5, ease: "power2.out" }
+  );
+  
+}, []);
 
   useEffect(() => {
     const handleScroll = () => {

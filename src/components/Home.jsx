@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
+import gsap from "gsap";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const textRef = useRef();
+  const marqueeRef = useRef();
 
   // Lenis smooth scroll only on homepage
   useEffect(() => {
@@ -27,7 +30,19 @@ const Home = () => {
     return () => lenis.destroy();
   }, []);
 
-  
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      textRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5, delay:1.3}
+    ).fromTo(
+      marqueeRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.8}
+    );
+  }, []);
 
   const handleNavClick = (id) => {
     if (location.pathname !== "/") {
@@ -56,19 +71,22 @@ const Home = () => {
     <>
     <div id='home' className='bg-[#1C1C1C] w-screen pt-[7vh] md:pt-0 h-full lg:h-screen'>
       <div className='text-white pt-[5vh] md:pt-[12vh] lg:pt-[18vh] flex flex-col justify-center items-center '>
-        <div><img className='w-[80vw] md:w-[60vw] lg:w-[40vw]' src="/images/logo.png" alt="Logo" /></div>
-        <div className='fonttwo -mt-1 pl-[10vw] md:pl-[6vw] lg:pl-[4vw] tracking-[3.5em] text-[3vw] md:text-[2vw] lg:text-[1.3vw] font-semibold text-center'>STUDIO</div>
-        <div className='fontone mt-4 tracking-normal font-light  text-[4vw] md:text-[3vw] lg:text-[1.2vw]'>Interior design studio based in London</div>
-
-        <div
+ <div ref={textRef} className='flex flex-col justify-center items-center'>
+         <div ><img className='w-[80vw] md:w-[60vw] lg:w-[40vw]' src="/images/logo.png" alt="Logo" /></div>
+        <div  className='fonttwo -mt-1 pl-[10vw] md:pl-[6vw] lg:pl-[4vw] tracking-[3.5em] text-[3vw] md:text-[2vw] lg:text-[1.3vw] font-semibold text-center'>STUDIO</div>
+        <div  className='fontone mt-4 tracking-normal font-light  text-[4vw] md:text-[3vw] lg:text-[1.2vw]'>Interior design studio based in London</div>
+         <div
           onClick={() => handleNavClick("contact")}
           className="mt-6 glass block md:hidden text-[4.3vw] bg-zinc-50 text-black px-6 py-3 rounded-2xl cursor-pointer"
         >
           FREE CONSULTATION
         </div>
+ </div>
 
-        <div className="overflow-hidden w-full">
-          <div className="marquee">
+       
+
+        <div ref={marqueeRef} className="overflow-hidden w-full">
+          <div  className="marquee">
             <div className="flex gap-5">
               {boxes}
             </div>
@@ -79,6 +97,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    
     
           </>
   )

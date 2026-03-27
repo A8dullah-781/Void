@@ -51,6 +51,25 @@ export default function HorizontalScroll() {
     });
   }, sectionRef);
 
+  gsap.fromTo(
+  sectionRef.current,
+  {
+    opacity: 0,
+    y: 80,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  }
+);
+
   return () => ctx.revert();
 }, []);
 

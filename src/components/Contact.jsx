@@ -1,9 +1,41 @@
 import React from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+  const sectionRef = useRef(null);
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    gsap.fromTo(
+      sectionRef.current,
+      {
+        opacity: 0,
+        y: 60,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+          once: true, // 🔥 important: stops double firing
+        },
+      }
+    );
+  }, sectionRef);
+
+  return () => ctx.revert(); // 🔥 kills duplicates
+}, []);
   return (
-    <div id="contact" className="w-screen h-full md:px-0 px-[6vw] bg-[#F2F2F2] ">
-      <div className="lg:h-[30vh] h-full lg:py-0 py-[4vh] w-full text-black fontone flex flex-col justify-center items-center text-center ">
+    <div    id="contact" className="w-screen h-full md:px-0 px-[6vw] bg-[#F2F2F2] ">
+      <div ref={sectionRef}>
+        <div className="lg:h-[30vh] h-full lg:py-0 py-[4vh] w-full text-black fontone flex flex-col justify-center items-center text-center ">
         <div className="hidden md:block text-[1.5vw] tracking-wider  uppercase font-light">Contact us:</div>
         <div className="md:text-[3vw] text-[9vw] font-bold">Get in touch with us</div>
         <div className="md:text-[1.4vw] text-[4vw]  font-light">
@@ -94,6 +126,7 @@ const Contact = () => {
             </div>
 
         </div>
+      </div>
       </div>
     </div>
   );

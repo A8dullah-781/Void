@@ -65,6 +65,22 @@ useEffect(() => {
         }
       );
     }
+
+    gsap.fromTo(
+  sectionRef.current,
+  { opacity: 0, y: 40 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+  }
+);
   }, sectionRef);
 
   return () => ctx.revert(); // 👈 ONLY CLEANUP THAT WORKS
@@ -118,7 +134,7 @@ useEffect(() => {
         <div className='h-[30vh] lg:h-[75vh] md:my-0 my-6 relative w-full bg-[url("/images/about.png")] bg-no-repeat bg-cover rounded-3xl'>
           <div
             ref={boxRef}
-            className=" w-[50vw] md:w-[25vw] flex justify-center items-center p-4 lg:p-10 absolute bottom-[-25px] right-[-15px] h-[10vh] md:h-[8vh] lg:h-[20vh] rounded-3xl glass "
+            className=" w-[50vw] md:w-[25vw] flex justify-center items-center p-4 lg:p-10 absolute bottom-[-25px] right-[-15px] h-[10vh] md:h-[8vh] lg:h-[20vh] rounded-3xl glassa "
           >
             <p className="text-white text-center fontone text-[3vw] md:text-[1.3vw]">
               “A studio built on thoughtful design, architectural clarity, and
