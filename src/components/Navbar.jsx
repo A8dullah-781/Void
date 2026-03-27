@@ -66,7 +66,7 @@ const Navbar = () => {
         ref={desktopRef}
         className="hidden md:flex justify-center items-center fixed top-0 w-full z-50"
       >
-        <div className="bg-[#f2f2f238] glass w-[80vw] lg:w-[60vw] px-6 text-white m-2 rounded-2xl flex justify-between items-center flex-row h-[6vh] lg:h-[10vh]">
+        <div className="bg-[#f2f2f238]/80 glass w-[80vw] lg:w-[60vw] px-6 text-white m-2 rounded-2xl flex justify-between items-center flex-row h-[6vh] lg:h-[10vh]">
           <div>
             <img src="/images/logo.png" alt="Logo" className="w-[10vw]" />
           </div>
