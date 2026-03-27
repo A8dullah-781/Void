@@ -3,7 +3,7 @@ import { portfolioTwo } from "../constants/constant";
 
 const PortfolioTwo = () => {
   return (
-    <div className="flex fontone  flex-col bg-[#1c1c1c] justify-center items-center w-screen">
+    <div className="flex fontone pt-[7vh] md:pt-0 flex-col bg-[#1c1c1c] justify-center items-center w-screen">
       <div className='md:h-[50vh] h-[40vh] rounded-3xl md:rounded-none md:m-0 m-4 lg:h-screen w-[90vw] md:w-screen flex justify-center items-start bg-[url("/images/portfolio/twoMain.png")] bg-cover bg-center bg-no-repeat'>
         <div className="h-[40vh] text-white flex justify-center items-center md:w-[50vw] md:mt-0 lg:mt-[16vh] -mt-[10vh]  flex flex-col">
           <div className="text-center text-[10vw] md:text-[6vw] leading-none uppercase font-bold md:font-semibold">
@@ -42,9 +42,9 @@ const PortfolioTwo = () => {
 </div>
 
       </div>
-      <div className="flex flex-row px-[7.5vw] py-4 md:h-[30vh] lg:h-[60vh] w-screen gap-4">
-        <div className="h-full rounded-2xl w-1/2 bg-[url('/images/portfolio/twoOne.png')] bg-cover bg-center bg-no-repeat"></div>
-        <div className="h-full rounded-2xl w-1/2 bg-[url('/images/portfolio/twoTwo.png')] bg-cover bg-center bg-no-repeat"></div>
+         <div className="flex flex-col  h-screen md:flex-row px-[7.5vw] py-4 md:h-[30vh] lg:h-[60vh] w-screen gap-4">
+        <div className="h-full rounded-2xl w-[85vw] md:w-1/2 bg-[url('/images/portfolio/twoOne.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="h-full rounded-2xl w-[85vw] md:w-1/2 bg-[url('/images/portfolio/twoTwo.png')] bg-cover bg-center bg-no-repeat"></div>
       </div>
       <div className="flex flex-col mb-4 gap-4 ">
       <div className="h-[40vh] lg:h-[80vh] py-4 w-[85vw] bg-[url('/images/portfolio/twoThree.png')] bg-cover bg-center bg-no-repeat rounded-2xl "></div>

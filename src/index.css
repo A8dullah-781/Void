@@ -34,14 +34,13 @@ body{
 .fonttwo {
   font-family: 'Montserrat', sans-serif;
 }
-
 .glass {
-    background: rgba(255, 255, 255, 0.1); /* transparency add ki */
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(8px);
     border-top: 1px solid rgba(255, 255, 255, 0.35);
     border-left: 1px solid rgba(255, 255, 255, 0.24);
-    box-shadow: 0 5px 22px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.37);
 }
 
 /* .glass{
