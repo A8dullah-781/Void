@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -20,16 +21,15 @@ import PortfolioThree from "../pages/PortfolioThree";
 import PortfolioFour from "../pages/PortfolioFour";
 import { useRef } from "react";
 
-// Scroll top on route change
+// Scroll top on route change + kill all ScrollTriggers
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   React.useEffect(() => {
+    ScrollTrigger.getAll().forEach(st => st.kill());
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
   return null;
 };
-
-
 
 
 const App = () => {
@@ -131,7 +131,7 @@ const App = () => {
           }
         />
       </Routes>
-    <div className="fixed bottom-0 left-0 w-screen md:h-[10vh] glasst z-[9999] pointer-events-none" />
+   <div className="fixed bottom-0 left-0 w-screen h-[10vh] glasst z-[9999]" />
 </BrowserRouter>
     </>
   );
