@@ -16,39 +16,47 @@ const PortfolioTwo = () => {
         </div>
       </div>
       <div className="h-full py-8 md:py-16 px-[7.5vw] text-white fontone  w-screen">
-        <div className="text-[6vw] text-center md:text-[2.6vw] font-bold">Project Overview:</div>
+        <div className="text-[6vw] text-center md:text-[2.6vw] font-bold">
+          Project Overview:
+        </div>
         <div className="text-[4vw] text-center md:text-left md:text-[1.8vw] font-light leading-none mt-4">
-         Forest Edge Residence is a modern luxury bedroom concept inspired by nature. It features a deep forest green accent wall, an olive green upholstered bed, and warm walnut furniture with matte black details. Soft neutral textures and warm ambient lighting create a calm, premium hotel-like atmosphere with a clean contemporary feel.
+          Forest Edge Residence is a modern luxury bedroom concept inspired by
+          nature. It features a deep forest green accent wall, an olive green
+          upholstered bed, and warm walnut furniture with matte black details.
+          Soft neutral textures and warm ambient lighting create a calm, premium
+          hotel-like atmosphere with a clean contemporary feel.
         </div>
       </div>
       <div className="h-full w-screen text-white px-[7.5vw]">
         <div className="text-[2.6vw]  font-bold">Color Palette:</div>
 
-     <div className="flex flex-wrap justify-center items-start gap-8 lg:gap-4 py-8">
-  {portfolioTwo.map((item, index) => (
-    <div key={index} className="palet flex flex-col md:w-[20vw] w-[35vw] lg:w-[12vw] justify-center text-center items-center">
-      
-      <div 
-        style={{ backgroundColor: item.color }}
-        className="md:h-36 lg:h-46 h-32 w-full"
-      ></div>
+        <div className="flex flex-wrap justify-center items-start gap-8 lg:gap-4 py-8">
+          {portfolioTwo.map((item, index) => (
+            <div
+              key={index}
+              className="palet flex flex-col md:w-[20vw] w-[35vw] lg:w-[12vw] justify-center text-center items-center"
+            >
+              <div
+                style={{ backgroundColor: item.color }}
+                className="md:h-36 lg:h-46 h-32 w-full"
+              ></div>
 
-      <div className="py-2 lg:text-[1.3vw] font-semibold">{item.title}</div>
+              <div className="py-2 lg:text-[1.3vw] font-semibold">
+                {item.title}
+              </div>
 
-      <div className="text-[3vw] md:text-[1vw]">{item.desc}</div>
-
-    </div>
-  ))}
-</div>
-
+              <div className="text-[3vw] md:text-[1vw]">{item.desc}</div>
+            </div>
+          ))}
+        </div>
       </div>
-         <div className="flex flex-col  h-screen md:flex-row px-[7.5vw] py-4 md:h-[30vh] lg:h-[60vh] w-screen gap-4">
+      <div className="flex flex-col  h-screen md:flex-row px-[7.5vw] py-4 md:h-[30vh] lg:h-[60vh] w-screen gap-4">
         <div className="h-full rounded-2xl w-[85vw] md:w-1/2 bg-[url('/images/portfolio/twoOne.webp')] bg-cover bg-center bg-no-repeat"></div>
         <div className="h-full rounded-2xl w-[85vw] md:w-1/2 bg-[url('/images/portfolio/twoTwo.webp')] bg-cover bg-center bg-no-repeat"></div>
       </div>
       <div className="flex flex-col mb-4 gap-4 ">
-      <div className="h-[40vh] lg:h-[80vh] py-4 w-[85vw] bg-[url('/images/portfolio/twoThree.webp')] bg-cover bg-center bg-no-repeat rounded-2xl "></div>
-      <div className="h-[40vh] lg:h-[80vh] py-4 w-[85vw] bg-[url('/images/portfolio/twoFour.webp')] bg-cover bg-center bg-no-repeat rounded-2xl "></div>
+        <div className="h-[40vh] lg:h-[80vh] py-4 w-[85vw] bg-[url('/images/portfolio/twoThree.webp')] bg-cover bg-center bg-no-repeat rounded-2xl "></div>
+        <div className="h-[40vh] lg:h-[80vh] py-4 w-[85vw] bg-[url('/images/portfolio/twoFour.webp')] bg-cover bg-center bg-no-repeat rounded-2xl "></div>
       </div>
     </div>
   );

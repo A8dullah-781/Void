@@ -69,7 +69,6 @@ const TestmonialsCards = [
     name: "Oliver Bennett ",
     title: "CEO Bennet Studio  ",
   },
-  
 ];
 
 const ExpertiseCards = [

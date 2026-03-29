@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { FaLinkedinIn, FaFacebookF, FaBehance, FaDribbble, FaInstagram } from "react-icons/fa";
+import {
+  FaLinkedinIn,
+  FaFacebookF,
+  FaBehance,
+  FaDribbble,
+  FaInstagram,
+} from "react-icons/fa";
 import gsap from "gsap";
 
 const Navbar = () => {
@@ -24,18 +30,17 @@ const Navbar = () => {
     setOpen(false);
   };
   useEffect(() => {
-  const target =
-    window.innerWidth >= 768 ? desktopRef.current : mobileRef.current;
+    const target =
+      window.innerWidth >= 768 ? desktopRef.current : mobileRef.current;
 
-  if (!target) return;
+    if (!target) return;
 
-gsap.fromTo(
-  ".navbar-inner",
-  { opacity: 0, width: 0 },
-  { opacity: 1, width: "65vw", duration: 1.2, ease: "power3.out" }
-);
-  
-}, []);
+    gsap.fromTo(
+      ".navbar-inner",
+      { opacity: 0, width: 0 },
+      { opacity: 1, width: "65vw", duration: 1.2, ease: "power3.out" },
+    );
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +66,6 @@ gsap.fromTo(
 
   return (
     <>
-      {/* DESKTOP NAVBAR */}
       <div
         ref={desktopRef}
         className="hidden md:flex justify-center items-center fixed top-0 w-full z-50"
@@ -96,7 +100,7 @@ gsap.fromTo(
                   {item.name}
                   <span className="absolute bottom-[-4px] left-1/2 w-0 h-[1px] bg-white transition-all duration-300 ease-out group-hover:w-full group-hover:left-0" />
                 </div>
-              )
+              ),
             )}
 
             <div
@@ -110,7 +114,6 @@ gsap.fromTo(
         </div>
       </div>
 
-      {/* MOBILE TOP BAR */}
       <div
         ref={mobileRef}
         className="md:hidden fixed top-0 w-full z-50 flex justify-between items-center px-5 py-4 bg-[#1C1C1C] text-white"
@@ -123,7 +126,6 @@ gsap.fromTo(
         </div>
       </div>
 
-      {/* MOBILE FULL SCREEN MENU */}
       <div
         className={`fixed top-0 right-0 h-screen w-screen bg-[#1C1C1C] text-white z-50 transform transition-transform duration-500 ${
           open ? "translate-x-0" : "translate-x-full"

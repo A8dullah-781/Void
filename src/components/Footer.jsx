@@ -30,7 +30,7 @@ export default function Footer() {
             start: "top 85%",
             once: true,
           },
-        }
+        },
       );
     }, footerRef);
 
@@ -38,13 +38,8 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer
-      ref={footerRef}
-      className="bg-[#1c1c1c] text-gray-400 px-6 py-14"
-    >
+    <footer ref={footerRef} className="bg-[#1c1c1c] text-gray-400 px-6 py-14">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-
-        {/* Logo */}
         <div className="mb-6 flex flex-col items-center">
           <div>
             <img className="w-[30vw]" src="/images/logo.webp" alt="Logo" />
@@ -54,7 +49,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Nav Links */}
         <ul className="flex gap-8 mb-8">
           {links.map((link, i) => (
             <li key={i} className="group relative cursor-pointer">
@@ -67,7 +61,6 @@ export default function Footer() {
           ))}
         </ul>
 
-        {/* Social Icons */}
         <div className="flex gap-6 text-lg mb-10">
           {[FaBehance, FaDribbble, FaLinkedinIn, FaFacebookF, FaInstagram].map(
             (Icon, i) => (
@@ -75,11 +68,10 @@ export default function Footer() {
                 key={i}
                 className="cursor-pointer hover:text-white transition duration-300 hover:scale-110"
               />
-            )
+            ),
           )}
         </div>
 
-        {/* Bottom */}
         <div className="w-full flex  flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-6 text-xs">
           <p className="md:-mt-20">© 2025 - All rights reserved</p>
 
@@ -92,7 +84,6 @@ export default function Footer() {
             </span>
           </div>
         </div>
-
       </div>
     </footer>
   );

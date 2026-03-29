@@ -12,102 +12,98 @@ export default function HorizontalScroll() {
   const trackRef = useRef(null);
 
   useEffect(() => {
-  if (!trackRef.current || !sectionRef.current) return;
+    if (!trackRef.current || !sectionRef.current) return;
 
-  const ctx = gsap.context(() => {
-    const scrollWidth = trackRef.current.scrollWidth;
-    const windowWidth = window.innerWidth;
+    const ctx = gsap.context(() => {
+      const scrollWidth = trackRef.current.scrollWidth;
+      const windowWidth = window.innerWidth;
 
-    // screen width ke hisaab se start/end
-    const isMobile = window.innerWidth < 1024;
-    const startPos = isMobile ? "top 13%" : "top top";
-    const endPos = isMobile
-      ? "+=" + (scrollWidth - windowWidth) / 2 // mobile me chhota scroll distance
-      : "+=" + (scrollWidth - windowWidth);   // desktop same
+      const isMobile = window.innerWidth < 1024;
+      const startPos = isMobile ? "top 13%" : "top top";
+      const endPos = isMobile
+        ? "+=" + (scrollWidth - windowWidth) / 2
+        : "+=" + (scrollWidth - windowWidth);
 
-    gsap.to(trackRef.current, {
-      x: -(scrollWidth - windowWidth),
-      ease: "none",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: startPos,
-        end: endPos,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
+      gsap.to(trackRef.current, {
+        x: -(scrollWidth - windowWidth),
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: startPos,
+          end: endPos,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      gsap.to(".hero", {
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: trackRef.current,
+          start: isMobile ? "left left" : "left left",
+          end: () => "+=" + trackRef.current.scrollWidth / (isMobile ? 40 : 10),
+          scrub: 1,
+        },
+      });
+    }, sectionRef);
+
+    gsap.fromTo(
+      sectionRef.current,
+      {
+        opacity: 0,
+        y: 80,
       },
-    });
-
-    gsap.to(".hero", {
-      opacity: 0,
-      ease: "none",
-      scrollTrigger: {
-        trigger: trackRef.current,
-        start: isMobile ? "left left" : "left left",
-        end: () => "+=" + trackRef.current.scrollWidth / (isMobile ? 40 : 10),
-        scrub: 1,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
       },
-    });
-  }, sectionRef);
+    );
 
-  gsap.fromTo(
-  sectionRef.current,
-  {
-    opacity: 0,
-    y: 80,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 1.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: sectionRef.current,
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-  }
-);
-
-  return () => ctx.revert();
-}, []);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section id="services" className="bg-[#1C1C1C] overflow-hidden relative">
-      {/* mobile */}
-       <div className="md:hidden fontone w-screen px-[7.5vw]">
-      <div className="font-bold text-[12vw] text-center py-6 text-[#FFFFFF] leading-none">
-        What We <br /> Provide?
-      </div>
+      <div className="md:hidden fontone w-screen px-[7.5vw]">
+        <div className="font-bold text-[12vw] text-center py-6 text-[#FFFFFF] leading-none">
+          What We <br /> Provide?
+        </div>
 
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={"auto"}
-        grabCursor={true}
-      >
-        {ExpertiseCards.map((card) => (
-          <SwiperSlide key={card.id} className="w-[90vw] py-8">
-            <div className="bg-[#F2F2F2] fontone h-[38vh] rounded-4xl p-[5vw] flex justify-between text-black flex-col">
-              <div className="flex flex-col justify-center items-start">
-                <div className="font-semibold leading-none h-[10vh]  text-[7vw]">
-                  {card.title}
+        <Swiper spaceBetween={20} slidesPerView={"auto"} grabCursor={true}>
+          {ExpertiseCards.map((card) => (
+            <SwiperSlide key={card.id} className="w-[90vw] py-8">
+              <div className="bg-[#F2F2F2] fontone h-[38vh] rounded-4xl p-[5vw] flex justify-between text-black flex-col">
+                <div className="flex flex-col justify-center items-start">
+                  <div className="font-semibold leading-none h-[10vh]  text-[7vw]">
+                    {card.title}
+                  </div>
+                  <div className="font-normal mt-4 text-[3vw]">
+                    {card.description}
+                  </div>
                 </div>
-                <div className="font-normal mt-4 text-[3vw]">{card.description}</div>
+                <div className="flex w-[15vw] ml-auto">
+                  <img src={card.logo} alt={card.title} />
+                </div>
               </div>
-              <div className="flex w-[15vw] ml-auto">
-                <img src={card.logo} alt={card.title} />
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-       <div className="text-center pb-6 text-[#FFFFFF]">
-        &lt; Drag to see more reviews &gt;
+        <div className="text-center pb-6 text-[#FFFFFF]">
+          &lt; Drag to see more reviews &gt;
+        </div>
       </div>
-    </div>
-      {/* desktop */}
+
       <div ref={sectionRef} className="md:block  hidden">
         <div className="hero w-[80vw] fixed left-0 fontone  md:h-[40vh]  lg:h-screen px-[7.5vw] flex items-center justify-start z-10 opacity-100">
           <div className="font-bold text-[6.5vw] text-[#FFFFFF] leading-none">

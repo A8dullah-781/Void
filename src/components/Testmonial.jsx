@@ -30,17 +30,15 @@ const Star = memo(({ type = "full", isDesktop }) => {
 const Testmonial = () => {
   return (
     <div className="w-screen h-full pb-8 px-[5vw] bg-[#1c1c1c]">
-      {/* heading */}
       <div className="flex justify-center md:justify-between  items-center text-white py-[4vh] lg:py-10">
         <div className="text-[10vw] fontone text-[#F2F2F2] text-center md:text-left md:text-[4.5vw] font-bold ">
           Clients Feedback
         </div>
       </div>
-      {/* swiper */}
-       <Swiper
+
+      <Swiper
         spaceBetween={20}
         grabCursor={true}
-      
         breakpoints={{
           0: { slidesPerView: 1 },
           768: { slidesPerView: 2 },

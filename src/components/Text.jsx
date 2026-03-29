@@ -24,7 +24,7 @@ const Text = () => {
           start: "top 80%",
           toggleActions: "play none none none",
         },
-      }
+      },
     );
   }, []);
 
@@ -34,11 +34,16 @@ const Text = () => {
         ref={textRef}
         className="fontone text-white text-[3.5vw] md:text-[2.2vw] text-center md:font-semibold"
       >
-        "At VOID STUDIO, we approach interior design with clarity and intention, shaping spaces through balance, proportion, and thoughtful restraint. By stripping away the unnecessary, we allow materials, light, and structure to define the experience, resulting in interiors that feel calm, purposeful, and enduring. Every project is a careful composition that supports how a space is lived in creating refined environments that remain both functional and relevant over time."
+        "At VOID STUDIO, we approach interior design with clarity and intention,
+        shaping spaces through balance, proportion, and thoughtful restraint. By
+        stripping away the unnecessary, we allow materials, light, and structure
+        to define the experience, resulting in interiors that feel calm,
+        purposeful, and enduring. Every project is a careful composition that
+        supports how a space is lived in creating refined environments that
+        remain both functional and relevant over time."
       </div>
     </div>
   );
 };
 
 export default Text;
-
