@@ -95,9 +95,10 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="mt-2 text-[4vw] md:text-[1.3vw]  bg-[#1C1C1C] w-[80%] md:w-[60%] text-[#FEF1D9] py-4 rounded-2xl "
+                    className="mt-2 text-[4vw] md:text-[1.3vw] btn-slidet  bg-[#1C1C1C] w-[80%] md:w-[60%] text-[#FEF1D9] py-4 rounded-2xl "
                   >
-                    Request a consultation
+                   <span className="bg-slide"></span>
+                <span className="text-slide">Request a consultation</span>
                   </button>
 
                   <input type="hidden" name="_captcha" value="false" />
