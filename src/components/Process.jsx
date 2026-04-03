@@ -75,7 +75,7 @@ const Process = () => {
   if (location.pathname !== "/") return null;
 
   return (
-    <div className="h-[400vh] w-screen">
+    <div className="h-[400vh] hidden lg:block w-screen">
       <div
         ref={processPin}
         className="h-screen w-screen fontone hidden xl:flex flex-col bg-[#1c1c1c] sticky top-0"
