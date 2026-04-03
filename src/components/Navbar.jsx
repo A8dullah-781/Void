@@ -155,7 +155,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-26 w-full flex justify-center gap-6 text-lg">
+        <div className="absolute bottom-36 w-full flex justify-center gap-6 text-lg">
           <FaLinkedinIn className="hover:scale-110 transition-all duration-300 cursor-pointer" />
           <FaFacebookF className="hover:scale-110 transition-all duration-300 cursor-pointer" />
           <FaBehance className="hover:scale-110 transition-all duration-300 cursor-pointer" />
@@ -163,7 +163,7 @@ const Navbar = () => {
           <FaInstagram className="hover:scale-110 transition-all duration-300 cursor-pointer" />
         </div>
 
-        <div className="absolute bottom-18 w-full text-center text-xs text-gray-300">
+        <div className="absolute bottom-24 w-full text-center text-xs text-gray-300">
           © 2025 – All rights reserved
         </div>
       </div>

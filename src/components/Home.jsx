@@ -88,7 +88,7 @@ const Home = () => {
             </div>
             <div
               onClick={() => handleNavClick("contact")}
-              className="mt-6 glass block md:hidden text-[4.3vw] bg-zinc-50 text-black px-6 py-3 rounded-2xl cursor-pointer"
+              className="mt-6 glass z-10 block md:hidden text-[4.3vw] bg-zinc-50 text-black px-6 py-3 rounded-2xl cursor-pointer"
             >
               FREE CONSULTATION
             </div>
