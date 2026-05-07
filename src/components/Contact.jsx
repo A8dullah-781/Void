@@ -35,10 +35,10 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-screen h-full md:px-0 px-[6vw] bg-[#F2F2F2] "
+      className="w-screen h-full py-0 md:py-[5vh] md:px-0 px-[6vw] bg-[#1C1C1C] "
     >
       <div ref={sectionRef}>
-        <div className="lg:h-[30vh] h-full lg:py-0 py-[4vh] w-full text-black fontone flex flex-col justify-center items-center text-center ">
+        <div className="lg:h-[30vh] h-full lg:py-0 py-[4vh] w-full text-[#F2F2F2] fontone flex flex-col justify-center items-center text-center ">
           <div className="hidden md:block text-[1.5vw] tracking-wider  uppercase font-light">
             Contact us:
           </div>
@@ -54,7 +54,7 @@ const Contact = () => {
         <div className="flex flex-row md:px-[7.5vw] px-0 md:h-[35vh] lg:h-full -mt-5 justify-center items-center">
           <div className="lg:h-[70vh]  h-full w-full md:w-[50%]">
             <div className="h-full w-full flex justify-center items-center ">
-              <div className="text-black text-[4vw] pb-[4vw] md:text-[1.3vw] rounded-3xl w-full md:w-[85%]">
+              <div className="text-[#F2F2F2] text-[4vw] pb-[4vw] md:text-[1.3vw] rounded-3xl w-full md:w-[85%]">
                 <form
                   action="https://formsubmit.co/your-email@example.com"
                   method="POST"
@@ -67,7 +67,7 @@ const Contact = () => {
                       id="fullName"
                       name="fullName"
                       required
-                      className="text-[#F2F2F2] font-light bg-[#1C1C1C] px-3 py-2 rounded-3xl"
+                      className="text-[#1C1C1C] font-light bg-[#F2F2F2] px-3 py-2 rounded-3xl"
                     />
                   </div>
 
@@ -78,7 +78,7 @@ const Contact = () => {
                       id="email"
                       name="email"
                       required
-                      className="text-[#F2F2F2] font-light bg-[#1C1C1C] px-3  py-2 rounded-3xl"
+                      className="text-[#1C1C1C] font-light bg-[#F2F2F2] px-3  py-2 rounded-3xl"
                     />
                   </div>
 
@@ -89,17 +89,17 @@ const Contact = () => {
                       name="message"
                       rows="4"
                       required
-                      className="text-[#F2F2F2] font-light px-3 bg-[#1C1C1C] py-2 rounded-3xl resize-none"
+                      className="text-[#1C1C1C] font-light px-3 bg-[#F2F2F2] py-2 rounded-3xl resize-none"
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="mt-2 text-[4vw] md:text-[1.3vw] btn-slidet  bg-[#1C1C1C] w-[80%] md:w-[60%] text-[#FEF1D9] py-4 rounded-2xl "
-                  >
-                   <span className="bg-slide"></span>
-                <span className="text-slide">Request a consultation</span>
-                  </button>
+                 <button
+  type="submit"
+  className="mt-2 text-[4vw] md:text-[1.3vw] btn-slidea bg-[#F2F2F2] w-[80%] md:w-[60%] py-4 rounded-2xl"
+>
+  <span className="bg-slide"></span>
+  <span className="text-slide">Request a consultation</span>
+</button>
 
                   <input type="hidden" name="_captcha" value="false" />
                 </form>
@@ -107,7 +107,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="lg:h-[70vh] h-[35vh] w-[50%] hidden md:block fontone font-semibold text-[1.3vw] ">
+          <div className="lg:h-[70vh] h-[35vh] w-[50%] hidden md:block text-[#F2F2F2] fontone font-semibold text-[1.3vw] ">
             <div className="mt-10 flex flex-col pl-[7.5vw] justify-center items-start gap-4">
               <div>Why Work With Void Studio?</div>
 
@@ -125,9 +125,9 @@ const Contact = () => {
                 an exact time to call?
               </div>
 
-              <button className="py-4 btn-slide px-10 rounded-2xl border-black border-1 mt-1">
+              <button className="py-4 btn-slide px-10 rounded-2xl text-[#F2F2F2] border-[#F2F2F2] border-1 mt-1">
                 <span className="bg-slide"></span>
-                <span className="text-slide">Book a call</span>
+                <span className="text-slide text-[#F2F2F2]">Book a call</span>
               </button>
             </div>
           </div>
